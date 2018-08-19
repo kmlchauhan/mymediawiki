@@ -9,6 +9,7 @@ kops create cluster \
   --state=s3://kops-state-k070918 \
   --authorization RBAC \
   --zones=ap-south-1a \
+  --image=${AMI_ID} \
   --node-count=2 \
   --node-size=t2.micro \
   --master-size=t2.micro \
