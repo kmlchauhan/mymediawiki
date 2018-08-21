@@ -31,4 +31,4 @@ kops create cluster \
   --target=terraform \
 # Create key pair files using this command
 # sshkeygen -f ~/.ssh/terraform-key
-  --ssh-public-key=~/.ssh/kmlchauhan_terraform.pub
+  --ssh-public-key=~/.ssh/kmlchauhan_terraform1.pub
