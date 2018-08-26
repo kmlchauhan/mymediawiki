@@ -1,6 +1,8 @@
 # mymediawiki
 Mediawiki deployment - Kubernetes, Kops, Terraform, AWS, Packer
 
+IMP - After cloning this repo to the local machine run this command dos2unix <script_file1> <script_file2> ...
+
 # Steps to Automate the Mediawiki app deployment -
 
 ### 1. Create docker image - Since I already have created the Automated Build in Dockerhub account, so once it detects any commit in this repo build will automatically trigger to create latest mediwiki image with namespace/name:tag as kmlchauhan/mediawiki:latest.
