@@ -4,26 +4,35 @@
 # Creating Kubernetes HA Cluster
 # *******************************
 
+export NODE_SIZE=${NODE_SIZE:-t2.micro}
+export MASTER_SIZE=${MASTER_SIZE:-t2.micro}
+export MASTER_ZONES=${MASTER_ZONES:-"us-east-1b,us-east-1c,us-east-1d"}
+export ZONES=${ZONES:-"us-east-1b,us-east-1c,us-east-1d"}
+export KOPS_STATE_STORE="s3://kopscluster-082618"
+
 kops create cluster \
 # This is the name of the cluster
   --name=clustername.com \
 # This is S3 bucket on AWS (Object Storage)
-  --state=s3://terraform-kops-s3-storage \
+  --state=${KOPS_STATE_STORE} \
 # Role Based Authorization
   --authorization RBAC \
 # Actual Data Center in N. Virginia
-  --zones=ap-south-1a \
+  --master-zones=${MASTER_ZONES} \
+  --zones=${ZONES} \
 # How many nodes we want
-  --node-count=2 \
+  --node-count=3 \
 # How much powerful EC2 instance in the cluster we want
-  --node-size=t2.micro \
-  --master-size=t2.micro \
+  --node-size=${NODE_SIZE} \
+  --master-size=${MASTER_SIZE} \
 # How many masters in K8s cluster we want
-  --master-count=1 \
+  --master-count=3 \
+  --image=ami-04169656fea786776 \
 # Hosted zone - we need to create it in advance in AWS route53
 # you can define your own DNS name
 # make sure that you have your own domain name
-  --dns-zone=zonename.com \
+  --dns-zone=dnsname.com \
+  --cloud-labels="Team=DevOps,Environment=PROD" \
 # This is the name of the output folder where 
 # kops will generate ==> Terraform code
   --out=clustername_terraform \
