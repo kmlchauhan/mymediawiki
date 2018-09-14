@@ -1,7 +1,7 @@
 version: '3'
 services:
   mediawiki:
-    image: kmlchauhan/thworksmwweb:1.31.0-3
+    image: kmlchauhan/mwweb:1.31.0-3
     hostname: mediawiki
     stdin_open: true
     tty: true
@@ -14,7 +14,7 @@ services:
     - MODE=remote
     - APP_NAME=mediawiki
     - MYSQL_ROOT_HOST=mwdb
-    - MYSQL_USER=thworks
+    - MYSQL_USER=mwweb
     - MYSQL_PASS=admin123
     - MYSQL_DATABASE=mediawiki
     - APP_USER=appuser
@@ -34,7 +34,7 @@ services:
     tty: true
     restart: always
     environment:
-    - MYSQL_USER=thworks
+    - MYSQL_USER=mwweb
     - MYSQL_PASSWORD=admin123
     - MYSQL_ROOT_HOST=mwdb
     - MYSQL_ROOT_PASSWORD=admin123
