@@ -34,4 +34,4 @@ kops create cluster \
   --networking=weave \
   --ssh-public-key=~/.ssh/kmlchauhan_terraform1.pub
 
-./pull-kubeconfig.sh
+#./pull-kubeconfig.sh
