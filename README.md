@@ -14,7 +14,7 @@ IMP - After cloning this repo to the local machine run this command dos2unix <sc
      - Create one folder and the terraform(.tf) file within that folder.
 ####  c. And then, the same script will initialize the terraform for the given provider(aws in this case) and then will apply(create) all the resources(total 35) from .tf file.
 ### 3. Then after close to 15 mins the complete infra will be up and running. You can check the nodes in the cluster using the command kubectl get nodes.
-### 4. Once the cluster is up and running deploy the mediawiki.yaml file using command kubectl apply -f mediawiki.yaml
+### 4. Once the cluster is up and running deploy the mediawiki.yaml file using command sudo kubectl create -f mediawiki.yaml
 ### 5. Then check the running app.
 
 # To be continued ...
