@@ -3,7 +3,7 @@ MAINTAINER Kamal Chauhan "kmlchauhan@gmail.com"
 
 RUN apt-get update -y
 RUN apt-get install -y apache2 php php-mysql libapache2-mod-php php-xml php-mbstring php-apcu php-intl imagemagick inkscape php-gd php-cli php-curl git
-RUN apt-get -y install git curl wget tree
+RUN apt-get -y install git curl wget tree vim
 
 ENV MEDIAWIKI_MAJOR 1.31
 ENV MEDIAWIKI_MINOR 0
