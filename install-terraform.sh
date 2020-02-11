@@ -1,5 +1,5 @@
-TERRAFORM_ZIP_FILE=terraform_0.11.10_linux_amd64.zip
-TERRAFORM=https://releases.hashicorp.com/terraform/0.11.10
+TERRAFORM_ZIP_FILE=terraform_0.12.20_linux_amd64.zip
+TERRAFORM=https://releases.hashicorp.com/terraform/0.12.20
 TERRAFORM_BIN=terraform
 
 function install_terraform {
