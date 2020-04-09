@@ -17,3 +17,5 @@ function install_terraform {
 sudo apt-get install unzip -y
 
 install_terraform
+
+https://us04web.zoom.us/j/357370386?pwd=SjF2SHdyYmVoS0psQTZWNGFZdEtXQT09
