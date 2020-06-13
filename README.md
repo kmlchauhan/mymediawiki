@@ -17,6 +17,4 @@ IMP - After cloning this repo to the local machine run this command dos2unix <sc
 ### 4. Once the cluster is up and running deploy the mediawiki.yaml file using command sudo kubectl create -f mediawiki.yaml
 ### 5. Then check the running app.
 
-### Change for just a testing purpose.
-
 # To be continued ...
